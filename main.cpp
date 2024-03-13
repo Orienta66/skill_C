@@ -1,22 +1,28 @@
 #include <iostream>
-
+int numbers(int a)
+{
+for(int i =0; i<3;++i)
+{
+ // if(a <0)
+ // {std::cout <<"a="<<a<< ", i="<< i <<std::endl;
+ //   break;}
+  if(a==0)
+  { std::cout <<"a="<<a<< ", i="<< i <<std::endl;
+    continue;}
+ // if(a>10)
+ // {std::cout <<"a="<<a<< ", i="<< i <<std::endl;
+  //  return 10;}
+  ++a;
+  std::cout <<"++a="<<a<< ", i="<< i <<std::endl;
+}
+std::cout<< "Finish cycle ";
+return a;
+}
+//-------------------------------
 int main()
 {
-double f[5]={0.0};
-int i=0;
-
-//начальные значения
-f[0]=0;
-f[1]=1;
-   std::cout<<"Fibonacchi number" <<0 <<" :"<<f[0]<<std::endl;
-   std::cout<<"Fibonacchi number" <<1 <<" :"<<f[1]<<std::endl;
-//вычисление последующих чисел
-for(i=2; i<5; i++)
-{
-  f[i]=f[i-1]+f[i-2];
-    std::cout<<"Fibonacchi number" <<i <<" :"<<f[i]<<std::endl;
-}
-
-
+//std::cout<<numbers(-3)<<"\n";
+std::cout<<numbers(0)<<"\n";
+//std::cout<<numbers(15)<<"\n";
 
 }
